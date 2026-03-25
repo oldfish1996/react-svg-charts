@@ -10,7 +10,6 @@ on:
 
 permissions:
   contents: read
-  id-token: write
 
 concurrency:
   group: npm-publish
@@ -53,7 +52,7 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm build
 
-      - name: Publish to npm (trusted publishing)
+      - name: Publish to npm
         run: |
           PKG_VERSION="$(node -p "require('./package.json').version")"
           if echo "$PKG_VERSION" | grep -q '-'; then
@@ -61,4 +60,6 @@ jobs:
           else
             NPM_TAG=latest
           fi
-          npm publish --access public --tag "$NPM_TAG" --provenance --registry https://registry.npmjs.org
+          npm publish --access public --tag "$NPM_TAG" --registry https://registry.npmjs.org
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
