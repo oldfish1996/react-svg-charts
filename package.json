@@ -1,12 +1,16 @@
 {
-  "name": "react-svg-charts",
+  "name": "@oldfish1996/react-svg-charts",
   "version": "0.1.0",
   "description": "React SVG chart components (line, bar, candle, radar, multi).",
   "license": "MIT",
   "author": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/oldfish1996/react-svg-charts.git"
+  },
+  "homepage": "https://github.com/oldfish1996/react-svg-charts",
+  "bugs": {
+    "url": "https://github.com/oldfish1996/react-svg-charts/issues"
   },
   "type": "module",
   "main": "./dist/cjs/index.cjs",
@@ -32,7 +36,11 @@
     "format": "prettier . --check",
     "format:write": "prettier . --write",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "prepublishOnly": "pnpm build"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "peerDependencies": {
     "react": ">=16.14.0",
