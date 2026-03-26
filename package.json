@@ -1,6 +1,6 @@
 {
   "name": "@oldfish1996/react-svg-charts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React SVG chart components (line, bar, candle, radar, multi).",
   "license": "MIT",
   "author": "",
