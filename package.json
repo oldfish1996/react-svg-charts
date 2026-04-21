@@ -42,7 +42,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "rollup -c",
+    "build": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\" && rollup -c",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "eslint .",
     "format": "prettier . --check",

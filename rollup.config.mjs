@@ -19,19 +19,19 @@ export default [
         tsconfig: './tsconfig.json',
         declaration: false,
         declarationMap: false,
-        sourceMap: true,
+        sourceMap: false,
       }),
     ],
     output: [
       {
         file: './dist/esm/index.js',
         format: 'esm',
-        sourcemap: true,
+        sourcemap: false,
       },
       {
         file: './dist/cjs/index.cjs',
         format: 'cjs',
-        sourcemap: true,
+        sourcemap: false,
         exports: 'named',
       },
       {
@@ -42,7 +42,7 @@ export default [
           react: 'React',
           'react-dom': 'ReactDOM',
         },
-        sourcemap: true,
+        sourcemap: false,
       },
       {
         file: './dist/umd/index.umd.min.js',
@@ -53,7 +53,7 @@ export default [
           'react-dom': 'ReactDOM',
         },
         plugins: [terser()],
-        sourcemap: true,
+        sourcemap: false,
       },
     ],
   },
