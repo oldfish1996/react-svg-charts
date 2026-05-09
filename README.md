@@ -107,3 +107,4 @@ npm i @oldfish1996/react-svg-charts@next
 - **Tag does not match package.json**：tag 名（去掉 `v`）必须与 `package.json` 中 `version` 完全一致。
 - **OTP / 401 Unauthorized**：`NPM_TOKEN` 不是 Automation 类型，或已过期；重新生成并更新 secret。
 - **lint / typecheck 失败**：在本地修复后再重新打 tag 发版。
+
